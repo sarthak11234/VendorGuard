@@ -1,0 +1,16 @@
+vendor_id,vendor_name,city,state,commodity,open_po_value_inr,lead_time_days,historical_ontime_pct,last_delivery_date,contact_whatsapp,backup_vendor_id
+VND-001,Nagpur Steel Traders Pvt Ltd,Nagpur,Maharashtra,CRCA Steel Sheet,1850000,12,74.5,2026-06-08,+91-9876543201,VND-007
+VND-002,Raipur Casting Works,Raipur,Chhattisgarh,CI Castings,1200000,15,68.0,2026-06-05,+91-9876543202,VND-004
+VND-003,Pune Fasteners Ltd,Pune,Maharashtra,High Tensile Bolts,820000,7,78.2,2026-06-12,+91-9876543203,
+VND-004,Kolhapur Pressings Pvt Ltd,Kolhapur,Maharashtra,Sheet Metal Parts,950000,10,85.0,2026-06-10,+91-9876543204,
+VND-005,Bhiwandi Metal Corp,Bhiwandi,Maharashtra,Steel Plates,1400000,14,88.5,2026-06-09,+91-9876543205,
+VND-006,Nashik Auto Components,Nashik,Maharashtra,Brake Assemblies,670000,8,91.0,2026-06-13,+91-9876543206,
+VND-007,Aurangabad Forgings Ltd,Aurangabad,Maharashtra,Forged Components,1100000,11,82.3,2026-06-07,+91-9876543207,
+VND-008,Bhilai Forge and Press,Bhilai,Chhattisgarh,Pressed Steel Parts,780000,13,90.0,2026-06-11,+91-9876543208,
+VND-009,Rajkot Springs Industries,Rajkot,Gujarat,Coil Springs,450000,9,93.5,2026-06-14,+91-9876543209,
+VND-010,Satara Rubber Works,Satara,Maharashtra,Rubber Gaskets,320000,6,95.0,2026-06-15,+91-9876543210,
+VND-011,Sangli Electrical Parts Co,Sangli,Maharashtra,Wiring Harness,280000,5,96.2,2026-06-16,+91-9876543211,
+VND-012,Solapur Stampings Pvt Ltd,Solapur,Maharashtra,Metal Stampings,510000,8,94.0,2026-06-14,+91-9876543212,
+VND-013,Hubli Alloys Ltd,Hubli,Karnataka,Aluminum Ingot,2200000,18,76.0,2026-06-03,+91-9876543213,VND-005
+VND-014,Indore Precision Tools,Indore,Madhya Pradesh,CNC Machined Parts,680000,10,89.0,2026-06-12,+91-9876543214,
+VND-015,Vapi Chemicals Pvt Ltd,Vapi,Gujarat,Industrial Coatings,390000,7,92.0,2026-06-15,+91-9876543215,

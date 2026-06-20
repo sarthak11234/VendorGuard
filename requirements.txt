@@ -1,0 +1,38 @@
+# ============================================
+# VendorGuard - Python Dependencies
+# Pin all versions on Day 1 to avoid breaking changes
+# ============================================
+
+# --- Agent Framework ---
+google-adk>=1.5.0
+google-genai>=1.16.1
+
+# --- Web Framework ---
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+python-multipart==0.0.20
+
+# --- HTTP Client ---
+httpx==0.28.1
+aiohttp==3.12.7
+
+# --- Data Validation ---
+pydantic==2.11.3
+
+# --- External Data Sources ---
+pytrends==4.9.2
+beautifulsoup4==4.13.4
+requests==2.32.3
+
+# --- Google Drive MCP ---
+google-auth==2.40.3
+google-auth-oauthlib==1.2.1
+google-api-python-client==2.170.0
+
+# --- Utilities ---
+python-dotenv==1.1.0
+uuid6==2024.7.10
+
+# --- CLI ---
+click==8.2.1
+rich==14.0.0

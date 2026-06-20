@@ -1,0 +1,44 @@
+# Ignore environment files and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+service-account*.json
+credentials*.json
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*.egg-info
+venv/
+.venv/
+env/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.docx
+*.md
+!README.md
+
+# Tests
+tests/
+.pytest_cache/
+
+# Gemini
+.gemini/
