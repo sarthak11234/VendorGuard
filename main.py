@@ -63,9 +63,9 @@ async def health_check():
     return HealthResponse(status="ok", version="1.0")
 
 
-# TODO (Phase 4): Add scan, vendor, and alert endpoints
-# from api.routes import router as api_router
-# app.include_router(api_router, prefix="/api")
+# Mount API routes
+from api.routes import router as api_router
+app.include_router(api_router, prefix="/api")
 
 
 # ============================================
