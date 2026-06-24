@@ -34,6 +34,12 @@ def parse_arguments() -> argparse.Namespace:
     
     # Define arguments
     parser.add_argument(
+        "command",
+        nargs="?",
+        choices=["scan"],
+        help="Command to run (e.g. 'scan').",
+    )
+    parser.add_argument(
         "--vendor-sheet",
         type=str,
         required=True,
@@ -152,7 +158,11 @@ async def run_cli_scan(args: argparse.Namespace) -> int:
         return 1
 
 
-if __name__ == "__main__":
+def main():
     args = parse_arguments()
     exit_code = asyncio.run(run_cli_scan(args))
     sys.exit(exit_code)
+
+
+if __name__ == "__main__":
+    main()

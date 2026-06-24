@@ -43,9 +43,14 @@ class Config:
     SYNTHETIC_DATA_PATH: str = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "data", "vendors_synthetic.csv"
     )
-    STATIC_FILES_PATH: str = os.path.join(
+    # Look for local frontend/dist first, fallback to static/ for Docker containers
+    _local_static: str = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "frontend", "dist"
+    )
+    _docker_static: str = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "static"
     )
+    STATIC_FILES_PATH: str = _local_static if os.path.isdir(_local_static) else _docker_static
 
     # --- External API Endpoints ---
     OPENWEATHERMAP_BASE_URL: str = "https://api.openweathermap.org/data/2.5"

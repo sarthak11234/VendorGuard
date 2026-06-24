@@ -1,0 +1,891 @@
+{
+  "timestamp": "2026-06-24T17:31:29.986309",
+  "scan_parameters": {
+    "input_source": "data\\vendors_synthetic.csv",
+    "risk_threshold": 65
+  },
+  "summary": {
+    "total_vendors": 15,
+    "high_risk_count": 3
+  },
+  "assessments": [
+    {
+      "vendor": {
+        "vendor_id": "VND-001",
+        "vendor_name": "Nagpur Steel Traders Pvt Ltd",
+        "city": "Nagpur",
+        "state": "Maharashtra",
+        "commodity": "CRCA Steel Sheet",
+        "open_po_value_inr": 1850000,
+        "lead_time_days": 12,
+        "historical_ontime_pct": 74.5,
+        "last_delivery_date": "2026-06-08",
+        "contact_whatsapp": "+91-9876543201",
+        "backup_vendor_id": "VND-007"
+      },
+      "risk_signal": {
+        "vendor_id": "VND-001",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 18.0,
+          "max_score": 30.0,
+          "evidence": "Mock Weather Alert: Moderate to heavy rain causing transport delays in Nagpur (Pre-seeded fallback).",
+          "source_url": "https://openweathermap.org/city/1262180"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 28.0,
+          "max_score": 30.0,
+          "evidence": "Local transport union strike scheduled in Nagpur, affecting logistics (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com/mock/nagpur-strike"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 18.0,
+          "max_score": 20.0,
+          "evidence": "Mock Google Trends Alert: Search interest for 'CRCA Steel Sheet' has spiked 68% in India, indicating severe supply tightness.",
+          "source_url": "https://trends.google.com/trends/explore?geo=IN&q=steel+price"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 5.1,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 74.5%.",
+          "source_url": null
+        },
+        "total_score": 69.1,
+        "timestamp": "2026-06-24T17:30:55.531026"
+      },
+      "risk_band": "HIGH",
+      "requires_action": true,
+      "action_summary": "HIGH RISK. Immediate procurement intervention recommended.",
+      "at_risk_po_value": 1850000
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-002",
+        "vendor_name": "Raipur Casting Works",
+        "city": "Raipur",
+        "state": "Chhattisgarh",
+        "commodity": "CI Castings",
+        "open_po_value_inr": 1200000,
+        "lead_time_days": 15,
+        "historical_ontime_pct": 68.0,
+        "last_delivery_date": "2026-06-05",
+        "contact_whatsapp": "+91-9876543202",
+        "backup_vendor_id": "VND-004"
+      },
+      "risk_signal": {
+        "vendor_id": "VND-002",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 28.0,
+          "max_score": 30.0,
+          "evidence": "Mock Weather Alert: Heavy monsoon warning and potential flooding in Raipur (Pre-seeded fallback).",
+          "source_url": "https://openweathermap.org/city/1258980"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 25.0,
+          "max_score": 30.0,
+          "evidence": "Industrial power cuts reported in Raipur region, affecting casting foundries (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com/mock/raipur-power-cuts"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 12.0,
+          "max_score": 20.0,
+          "evidence": "Mock Google Trends Alert: Search interest for 'iron price' is up 28% in India, showing moderate price pressure.",
+          "source_url": "https://trends.google.com/trends/explore?geo=IN&q=iron+price"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 6.4,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 68.0%.",
+          "source_url": null
+        },
+        "total_score": 71.4,
+        "timestamp": "2026-06-24T17:30:56.563117"
+      },
+      "risk_band": "HIGH",
+      "requires_action": true,
+      "action_summary": "HIGH RISK. Immediate procurement intervention recommended.",
+      "at_risk_po_value": 1200000
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-003",
+        "vendor_name": "Pune Fasteners Ltd",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "commodity": "High Tensile Bolts",
+        "open_po_value_inr": 820000,
+        "lead_time_days": 7,
+        "historical_ontime_pct": 78.2,
+        "last_delivery_date": "2026-06-12",
+        "contact_whatsapp": "+91-9876543203",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-003",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Pune (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Pune (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'High Tensile Bolts' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 4.4,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 78.2%.",
+          "source_url": null
+        },
+        "total_score": 18.4,
+        "timestamp": "2026-06-24T17:30:59.047253"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-004",
+        "vendor_name": "Kolhapur Pressings Pvt Ltd",
+        "city": "Kolhapur",
+        "state": "Maharashtra",
+        "commodity": "Sheet Metal Parts",
+        "open_po_value_inr": 950000,
+        "lead_time_days": 10,
+        "historical_ontime_pct": 85.0,
+        "last_delivery_date": "2026-06-10",
+        "contact_whatsapp": "+91-9876543204",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-004",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Kolhapur (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Kolhapur (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Sheet Metal Parts' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 3.0,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 85.0%.",
+          "source_url": null
+        },
+        "total_score": 17.0,
+        "timestamp": "2026-06-24T17:31:01.392148"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-005",
+        "vendor_name": "Bhiwandi Metal Corp",
+        "city": "Bhiwandi",
+        "state": "Maharashtra",
+        "commodity": "Steel Plates",
+        "open_po_value_inr": 1400000,
+        "lead_time_days": 14,
+        "historical_ontime_pct": 88.5,
+        "last_delivery_date": "2026-06-09",
+        "contact_whatsapp": "+91-9876543205",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-005",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Bhiwandi (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Bhiwandi (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Steel Plates' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 2.3,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 88.5%.",
+          "source_url": null
+        },
+        "total_score": 16.3,
+        "timestamp": "2026-06-24T17:31:03.713429"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-006",
+        "vendor_name": "Nashik Auto Components",
+        "city": "Nashik",
+        "state": "Maharashtra",
+        "commodity": "Brake Assemblies",
+        "open_po_value_inr": 670000,
+        "lead_time_days": 8,
+        "historical_ontime_pct": 91.0,
+        "last_delivery_date": "2026-06-13",
+        "contact_whatsapp": "+91-9876543206",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-006",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Nashik (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Nashik (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Brake Assemblies' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 1.8,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 91.0%.",
+          "source_url": null
+        },
+        "total_score": 15.8,
+        "timestamp": "2026-06-24T17:31:06.070170"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-007",
+        "vendor_name": "Aurangabad Forgings Ltd",
+        "city": "Aurangabad",
+        "state": "Maharashtra",
+        "commodity": "Forged Components",
+        "open_po_value_inr": 1100000,
+        "lead_time_days": 11,
+        "historical_ontime_pct": 82.3,
+        "last_delivery_date": "2026-06-07",
+        "contact_whatsapp": "+91-9876543207",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-007",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Aurangabad (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Aurangabad (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Forged Components' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 3.5,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 82.3%.",
+          "source_url": null
+        },
+        "total_score": 17.5,
+        "timestamp": "2026-06-24T17:31:08.517266"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-008",
+        "vendor_name": "Bhilai Forge and Press",
+        "city": "Bhilai",
+        "state": "Chhattisgarh",
+        "commodity": "Pressed Steel Parts",
+        "open_po_value_inr": 780000,
+        "lead_time_days": 13,
+        "historical_ontime_pct": 90.0,
+        "last_delivery_date": "2026-06-11",
+        "contact_whatsapp": "+91-9876543208",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-008",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Bhilai (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Bhilai (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Pressed Steel Parts' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 2.0,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 90.0%.",
+          "source_url": null
+        },
+        "total_score": 16.0,
+        "timestamp": "2026-06-24T17:31:11.087397"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-009",
+        "vendor_name": "Rajkot Springs Industries",
+        "city": "Rajkot",
+        "state": "Gujarat",
+        "commodity": "Coil Springs",
+        "open_po_value_inr": 450000,
+        "lead_time_days": 9,
+        "historical_ontime_pct": 93.5,
+        "last_delivery_date": "2026-06-14",
+        "contact_whatsapp": "+91-9876543209",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-009",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Rajkot (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Rajkot (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Coil Springs' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 1.3,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 93.5%.",
+          "source_url": null
+        },
+        "total_score": 15.3,
+        "timestamp": "2026-06-24T17:31:13.958610"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-010",
+        "vendor_name": "Satara Rubber Works",
+        "city": "Satara",
+        "state": "Maharashtra",
+        "commodity": "Rubber Gaskets",
+        "open_po_value_inr": 320000,
+        "lead_time_days": 6,
+        "historical_ontime_pct": 95.0,
+        "last_delivery_date": "2026-06-15",
+        "contact_whatsapp": "+91-9876543210",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-010",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Satara (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Satara (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Rubber Gaskets' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 1.0,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 95.0%.",
+          "source_url": null
+        },
+        "total_score": 15.0,
+        "timestamp": "2026-06-24T17:31:16.932657"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-011",
+        "vendor_name": "Sangli Electrical Parts Co",
+        "city": "Sangli",
+        "state": "Maharashtra",
+        "commodity": "Wiring Harness",
+        "open_po_value_inr": 280000,
+        "lead_time_days": 5,
+        "historical_ontime_pct": 96.2,
+        "last_delivery_date": "2026-06-16",
+        "contact_whatsapp": "+91-9876543211",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-011",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Sangli (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Sangli (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Wiring Harness' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 0.8,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 96.2%.",
+          "source_url": null
+        },
+        "total_score": 14.8,
+        "timestamp": "2026-06-24T17:31:19.268104"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-012",
+        "vendor_name": "Solapur Stampings Pvt Ltd",
+        "city": "Solapur",
+        "state": "Maharashtra",
+        "commodity": "Metal Stampings",
+        "open_po_value_inr": 510000,
+        "lead_time_days": 8,
+        "historical_ontime_pct": 94.0,
+        "last_delivery_date": "2026-06-14",
+        "contact_whatsapp": "+91-9876543212",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-012",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Solapur (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Solapur (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Metal Stampings' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 1.2,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 94.0%.",
+          "source_url": null
+        },
+        "total_score": 15.2,
+        "timestamp": "2026-06-24T17:31:21.786123"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-013",
+        "vendor_name": "Hubli Alloys Ltd",
+        "city": "Hubli",
+        "state": "Karnataka",
+        "commodity": "Aluminum Ingot",
+        "open_po_value_inr": 2200000,
+        "lead_time_days": 18,
+        "historical_ontime_pct": 76.0,
+        "last_delivery_date": "2026-06-03",
+        "contact_whatsapp": "+91-9876543213",
+        "backup_vendor_id": "VND-005"
+      },
+      "risk_signal": {
+        "vendor_id": "VND-013",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 25.0,
+          "max_score": 30.0,
+          "evidence": "Mock Weather Alert: Heavy monsoon and severe waterlogging forecast in Hubli (Pre-seeded fallback).",
+          "source_url": "https://openweathermap.org/city/1270101"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 25.0,
+          "max_score": 30.0,
+          "evidence": "Local labor dispute and lockouts reported at fastener factories in Hubli area (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com/mock/hubli-lockout"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 12.0,
+          "max_score": 20.0,
+          "evidence": "Mock Google Trends Alert: Search interest for 'aluminum price' is up 24% in India, indicating moderate volatility.",
+          "source_url": "https://trends.google.com/trends/explore?geo=IN&q=aluminum+price"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 4.8,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 76.0%.",
+          "source_url": null
+        },
+        "total_score": 66.8,
+        "timestamp": "2026-06-24T17:31:24.206160"
+      },
+      "risk_band": "HIGH",
+      "requires_action": true,
+      "action_summary": "HIGH RISK. Immediate procurement intervention recommended.",
+      "at_risk_po_value": 2200000
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-014",
+        "vendor_name": "Indore Precision Tools",
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "commodity": "CNC Machined Parts",
+        "open_po_value_inr": 680000,
+        "lead_time_days": 10,
+        "historical_ontime_pct": 89.0,
+        "last_delivery_date": "2026-06-12",
+        "contact_whatsapp": "+91-9876543214",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-014",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Indore (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Indore (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'CNC Machined Parts' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 2.2,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 89.0%.",
+          "source_url": null
+        },
+        "total_score": 16.2,
+        "timestamp": "2026-06-24T17:31:26.578869"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    },
+    {
+      "vendor": {
+        "vendor_id": "VND-015",
+        "vendor_name": "Vapi Chemicals Pvt Ltd",
+        "city": "Vapi",
+        "state": "Gujarat",
+        "commodity": "Industrial Coatings",
+        "open_po_value_inr": 390000,
+        "lead_time_days": 7,
+        "historical_ontime_pct": 92.0,
+        "last_delivery_date": "2026-06-15",
+        "contact_whatsapp": "+91-9876543215",
+        "backup_vendor_id": null
+      },
+      "risk_signal": {
+        "vendor_id": "VND-015",
+        "weather_risk": {
+          "source_name": "OpenWeatherMap",
+          "category": "weather",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No severe weather warnings for Vapi (Mock fallback).",
+          "source_url": "https://openweathermap.org"
+        },
+        "news_risk": {
+          "source_name": "Newscatcher",
+          "category": "news",
+          "score": 5.0,
+          "max_score": 30.0,
+          "evidence": "No significant supply chain disruptions reported for Vapi (Mock fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]",
+          "source_url": "https://newscatcherapi.com"
+        },
+        "commodity_risk": {
+          "source_name": "GoogleTrends",
+          "category": "commodity",
+          "score": 4.0,
+          "max_score": 20.0,
+          "evidence": "Search interest for 'Industrial Coatings' price trend in India is stable (Mock fallback).",
+          "source_url": "https://trends.google.com"
+        },
+        "historical_risk": {
+          "source_name": "InternalERP",
+          "category": "historical",
+          "score": 1.6,
+          "max_score": 20.0,
+          "evidence": "Historical on-time delivery rate is 92.0%.",
+          "source_url": null
+        },
+        "total_score": 15.6,
+        "timestamp": "2026-06-24T17:31:28.945469"
+      },
+      "risk_band": "LOW",
+      "requires_action": false,
+      "action_summary": "Status OK. Regular monitoring.",
+      "at_risk_po_value": 0
+    }
+  ],
+  "drafts": [
+    {
+      "vendor_id": "VND-002",
+      "vendor_name": "Raipur Casting Works",
+      "risk_summary": "Severe disruptions detected: Weather: Mock Weather Alert: Heavy monsoon warning and potential flooding in Raipur (Pre-seeded fallback).; News: Industrial power cuts reported in Raipur region, affecting casting foundries (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]; Commodity: Mock Google Trends Alert: Search interest for 'iron price' is up 28% in India, showing moderate price pressure.",
+      "recommended_action": "Pre-emptively place early order or shift procurement to backup supplier 'Kolhapur Pressings Pvt Ltd'.",
+      "alternate_supplier": "Kolhapur Pressings Pvt Ltd",
+      "alternate_supplier_id": "VND-004",
+      "draft_po_text": "DRAFT PURCHASE ORDER\nTo: Kolhapur Pressings Pvt Ltd\nItem: CI Castings\nValue: INR 1,200,000\nNote: Expedited delivery request due to high risk at primary supplier.",
+      "whatsapp_message": "\u26a0\ufe0f *VendorGuard Risk Alert* \u26a0\ufe0f\n\nPrimary supplier *Raipur Casting Works* (Raipur) is flagged at *HIGH RISK* (Score: 71).\nReason: Weather: Mock Weather Alert: Heavy monsoon warning and potential flooding in Raipur (Pre-seeded fallback).; News: Industrial power cuts reported in Raipur region, affecting casting foundries (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]; Commodity: Mock Google Trends Alert: Search interest for 'iron price' is up 28% in India, showing moderate price pressure.\n\nRecommended: Pre-emptively place early order or shift procurement to backup supplier 'Kolhapur Pressings Pvt Ltd'.",
+      "urgency": "HIGH",
+      "generated_at": "2026-06-24T17:31:29.349487"
+    },
+    {
+      "vendor_id": "VND-001",
+      "vendor_name": "Nagpur Steel Traders Pvt Ltd",
+      "risk_summary": "Severe disruptions detected: Weather: Mock Weather Alert: Moderate to heavy rain causing transport delays in Nagpur (Pre-seeded fallback).; News: Local transport union strike scheduled in Nagpur, affecting logistics (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]; Commodity: Mock Google Trends Alert: Search interest for 'CRCA Steel Sheet' has spiked 68% in India, indicating severe supply tightness.",
+      "recommended_action": "Pre-emptively place early order or shift procurement to backup supplier 'Aurangabad Forgings Ltd'.",
+      "alternate_supplier": "Aurangabad Forgings Ltd",
+      "alternate_supplier_id": "VND-007",
+      "draft_po_text": "DRAFT PURCHASE ORDER\nTo: Aurangabad Forgings Ltd\nItem: CRCA Steel Sheet\nValue: INR 1,850,000\nNote: Expedited delivery request due to high risk at primary supplier.",
+      "whatsapp_message": "\u26a0\ufe0f *VendorGuard Risk Alert* \u26a0\ufe0f\n\nPrimary supplier *Nagpur Steel Traders Pvt Ltd* (Nagpur) is flagged at *HIGH RISK* (Score: 69).\nReason: Weather: Mock Weather Alert: Moderate to heavy rain causing transport delays in Nagpur (Pre-seeded fallback).; News: Local transport union strike scheduled in Nagpur, affecting logistics (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]; Commodity: Mock Google Trends Alert: Search interest for 'CRCA Steel Sheet' has spiked 68% in India, indicating severe supply tightness.\n\nRecommended: Pre-emptively place early order or shift procurement to backup supplier 'Aurangabad Forgings Ltd'.",
+      "urgency": "HIGH",
+      "generated_at": "2026-06-24T17:31:29.884216"
+    },
+    {
+      "vendor_id": "VND-013",
+      "vendor_name": "Hubli Alloys Ltd",
+      "risk_summary": "Severe disruptions detected: Weather: Mock Weather Alert: Heavy monsoon and severe waterlogging forecast in Hubli (Pre-seeded fallback).; News: Local labor dispute and lockouts reported at fastener factories in Hubli area (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]; Commodity: Mock Google Trends Alert: Search interest for 'aluminum price' is up 24% in India, indicating moderate volatility.",
+      "recommended_action": "Pre-emptively place early order or shift procurement to backup supplier 'Bhiwandi Metal Corp'.",
+      "alternate_supplier": "Bhiwandi Metal Corp",
+      "alternate_supplier_id": "VND-005",
+      "draft_po_text": "DRAFT PURCHASE ORDER\nTo: Bhiwandi Metal Corp\nItem: Aluminum Ingot\nValue: INR 2,200,000\nNote: Expedited delivery request due to high risk at primary supplier.",
+      "whatsapp_message": "\u26a0\ufe0f *VendorGuard Risk Alert* \u26a0\ufe0f\n\nPrimary supplier *Hubli Alloys Ltd* (Hubli) is flagged at *HIGH RISK* (Score: 67).\nReason: Weather: Mock Weather Alert: Heavy monsoon and severe waterlogging forecast in Hubli (Pre-seeded fallback).; News: Local labor dispute and lockouts reported at fastener factories in Hubli area (Pre-seeded fallback). [Logistics Fuel Impact: Diesel price is INR 95.20/L (Baseline: INR 89.62/L)]; Commodity: Mock Google Trends Alert: Search interest for 'aluminum price' is up 24% in India, indicating moderate volatility.\n\nRecommended: Pre-emptively place early order or shift procurement to backup supplier 'Bhiwandi Metal Corp'.",
+      "urgency": "HIGH",
+      "generated_at": "2026-06-24T17:31:29.979020"
+    }
+  ]
+}

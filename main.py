@@ -20,19 +20,19 @@ async def lifespan(app: FastAPI):
     # Startup
     missing_keys = config.validate()
     if missing_keys:
-        print(f"⚠️  Warning: Missing API keys: {', '.join(missing_keys)}")
+        print(f"Warning: Missing API keys: {', '.join(missing_keys)}")
         print("   Some features may not work. Set them in .env file.")
     else:
-        print("✅ All API keys configured")
+        print("All API keys configured")
 
-    print(f"🚀 VendorGuard starting on {config.HOST}:{config.PORT}")
+    print(f"VendorGuard starting on {config.HOST}:{config.PORT}")
     print(f"   Risk threshold: {config.RISK_THRESHOLD}")
     print(f"   Scan timeout: {config.SCAN_TIMEOUT_SECONDS}s")
 
     yield
 
     # Shutdown
-    print("👋 VendorGuard shutting down")
+    print("VendorGuard shutting down")
 
 
 # Create FastAPI app
@@ -76,7 +76,7 @@ app.include_router(api_router, prefix="/api")
 static_dir = config.STATIC_FILES_PATH
 if os.path.isdir(static_dir):
     app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
-    print(f"📦 Serving frontend from {static_dir}")
+    print(f"Serving frontend from {static_dir}")
 
 
 # ============================================

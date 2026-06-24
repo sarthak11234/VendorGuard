@@ -120,9 +120,9 @@ vendorguard/
 
 | Band | Score | Color | Action |
 |------|-------|-------|--------|
-| 🟢 LOW | 0–40 | Green `#16A34A` | Monitor only |
-| 🟡 MEDIUM | 41–65 | Amber `#D97706` | Flag on dashboard |
-| 🔴 HIGH | 66–100 | Red `#DC2626` | Auto-trigger procurement |
+| 🟢 LOW | 0–40 | Muted Sage Green `#708A74` | Monitor only |
+| 🟡 MEDIUM | 41–65 | Soft Orange `#D97E4A` | Flag on dashboard |
+| 🔴 HIGH | 66–100 | Burnt Terracotta `#B8432B` | Auto-trigger procurement |
 
 ---
 

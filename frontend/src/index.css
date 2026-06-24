@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   VendorGuard Retro-Aerospace Light Mode
+   ============================================ */
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-[#FAF7F2] text-[#2E2925] min-h-screen;
+    /* Soft, diffused orbital sunlit glow */
+    background-image: 
+      radial-gradient(circle 800px at 100% -200px, rgba(234, 186, 149, 0.15), transparent),
+      radial-gradient(circle 600px at -100px 80%, rgba(130, 154, 134, 0.1), transparent);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF7F2;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #DED9CE;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C7C0B4;
+  }
+}
+
+@layer components {
+  /* Frosted Glassmorphism Retro Card */
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(201, 90, 62, 0.15);
+    backdrop-filter: blur(16px);
+    box-shadow: 
+      0 4px 6px -1px rgba(46, 41, 37, 0.05),
+      0 2px 4px -1px rgba(46, 41, 37, 0.03),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    @apply rounded-xl transition-all duration-300;
+  }
+  
+  .glass-card:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(201, 90, 62, 0.35);
+    box-shadow: 
+      0 10px 15px -3px rgba(46, 41, 37, 0.08),
+      0 4px 6px -2px rgba(46, 41, 37, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+  }
+
+  /* Risk Band Borders */
+  .risk-border-low {
+    border-left: 4px solid #708A74;
+  }
+  .risk-border-medium {
+    border-left: 4px solid #D97E4A;
+  }
+  .risk-border-high {
+    border-left: 4px solid #B8432B;
+  }
+
+  /* Risk Badge (Retro Badge style) */
+  .risk-badge {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider;
+  }
+  .risk-badge-low {
+    @apply bg-[#EAEFEA] text-[#708A74] ring-1 ring-[#708A74]/20;
+  }
+  .risk-badge-medium {
+    @apply bg-[#FAF0E8] text-[#D97E4A] ring-1 ring-[#D97E4A]/20;
+  }
+  .risk-badge-high {
+    @apply bg-[#FDF1EF] text-[#B8432B] ring-1 ring-[#B8432B]/20;
+  }
+
+  /* Progress Bar (Retro styling) */
+  .progress-bar-track {
+    @apply w-full h-2 bg-slate-850/50 rounded-full overflow-hidden;
+  }
+  .progress-bar-fill {
+    @apply h-full rounded-full transition-all duration-700 ease-out;
+  }
+
+  /* Terracotta Primary Buttons & Muted Secondary Buttons */
+  .btn-primary {
+    @apply px-5 py-2.5 rounded-xl font-bold text-sm
+           bg-[#C95A3E] hover:bg-[#B34C32] text-white
+           transition-all duration-200 shadow-md shadow-[#C95A3E]/10
+           hover:shadow-lg hover:shadow-[#C95A3E]/20
+           active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply px-4 py-2 rounded-xl font-bold text-sm
+           bg-transparent border border-[#DED9CE] text-[#2E2925]
+           hover:bg-[#F5F2EB] hover:border-[#C7C0B4]
+           transition-all duration-200 active:scale-[0.98];
+  }
+
+  /* Modal Overlay */
+  .modal-overlay {
+    @apply fixed inset-0 bg-[#2E2925]/30 backdrop-blur-md z-50
+           flex items-center justify-center p-4;
+    animation: fadeIn 0.2s ease-out;
+  }
+  .modal-content {
+    background-color: rgba(250, 247, 242, 0.95);
+    border: 1px solid #DED9CE;
+    box-shadow: 
+      0 20px 25px -5px rgba(46, 41, 37, 0.1),
+      0 10px 10px -5px rgba(46, 41, 37, 0.04);
+    @apply rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto;
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#C95A3E] to-[#A63F28];
+  }
+}
